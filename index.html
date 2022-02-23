@@ -1,39 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
     <style>
-        .text-field {
+        .wrapper {
             display: flex;
             flex-direction: column;
+        }
 
-            margin-bottom: 20px;
-
-            max-width: 300px;
+        .clearBtn {
+            margin-left: 4px;
         }
     </style>
 </head>
 
 <body>
-    <h1>Мои заметки</h1>
+    <div class="wrapper">
+        <h1>Сюда можно записать заметку</h1>
+        <div>
+            <input type="text" placeholder="Заметка" class="note">
+            <input type="button" value="Сохранить" class="addBtn">
+            <input type="button" value="Удалить сохраненные заметки" class="clearBtn">
+        </div>
+    </div>
 
-    <div id="text"></div>
+    <div class="list"></div>
 
-        <form novalidate>
-            <div class="text-field">
-                <label for="note">Заметка:</label>
-                <textarea id="note" required></textarea>
-            </div>
 
-            <button onclick="checkValidity()">Сохранить</button>
-        </form>
-
-    <div id="message"></div>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
